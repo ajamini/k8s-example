@@ -26,6 +26,9 @@ steps:
       - 'deployment/hello-deployment'  # Must match the name of your Deployment in deployment.yaml
       - 'hello-container=gcr.io/$PROJECT_ID/hello-k8s-app:$COMMIT_SHA'
 
+options:
+  logging: CLOUD_LOGGING_ONLY
+
 images:
   - 'gcr.io/$PROJECT_ID/hello-k8s-app:$COMMIT_SHA'
 
